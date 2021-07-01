@@ -10,7 +10,8 @@
 		"type:check": "tsc",
 		"lint:ts": "eslint './src/**/*.{ts,tsx}'",
 		"lint:css": "stylelint './src/**/*.{ts,tsx}'",
-		"lint": "yarn lint:ts && yarn lint:css"
+		"lint": "yarn lint:ts && yarn lint:css",
+		"prepare": "husky install"
 	},
 	"husky": {
 		"hooks": {

@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect, useState } from 'react';
 import axios from 'axios';
 import GameList from 'components/Games/GamesList';
 import { Game } from 'interfaces';
-import { API_HOST, API_KEY } from 'constantsGames';
+import { API_HOST, API_KEY } from 'constants-globals';
 
 const GameListContainer = (): ReactElement => {
 	const [games, setGames] = useState<Game[]>([]);
