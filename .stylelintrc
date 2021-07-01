@@ -1,9 +1,9 @@
 {
   "processors": [
-    "stylelint-processors-styled-components"
+    "stylelint-processor-styled-components"
   ],
-  "extends": {
+  "extends": [
     "stylelint-config-recommended",
-    "stylelint-config-styled-components",
-  }
+    "stylelint-config-styled-components"
+  ]
 }
