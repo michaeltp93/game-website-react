@@ -6,7 +6,7 @@
 				"targets": {
 					"chrome": "58"
 				},
-				"corejs": "3.0.0",
+				"corejs": "3.15",
 				"useBuiltIns": "usage"
 			}
 		],
