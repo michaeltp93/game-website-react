@@ -12,7 +12,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				exclude: /node_modules/,
+				exclude: /node_module/,
 				use: ['babel-loader', 'stylelint-custom-processor-loader'],
 			},
 		],
