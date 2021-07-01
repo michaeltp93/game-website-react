@@ -6,7 +6,9 @@
 	"license": "MIT",
 	"scripts": {
 		"type:check": "tsc",
-		"lint:ts": "eslint './src/**/*.{ts,tsx}'"
+		"lint:ts": "eslint './src/**/*.{ts,tsx}'",
+		"lint:css": "stylelint './src/**/*.{ts,tsx}'",
+		"lint": "yarn lint:ts && yarn lint:css"
 	},
 	"dependencies": {
 		"@babel/polyfill": "^7.12.1",
