@@ -5,7 +5,8 @@
 	"author": "michaeltp93 <michael.trejosp@hotmail.es>",
 	"license": "MIT",
 	"scripts": {
-		"type:check": "tsc"
+		"type:check": "tsc",
+		"lint:ts": "eslint './src/**/*.{ts,tsx}'"
 	},
 	"dependencies": {
 		"@babel/polyfill": "^7.12.1",
