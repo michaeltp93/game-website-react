@@ -11,6 +11,10 @@ import { breakpoints } from 'styles/breakpoints';
 
 export const List = styled.ul`
 	display: block;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	max-width: 542px;
 	margin: 0 auto;
 	padding: 0 16px;
@@ -21,6 +25,7 @@ export const List = styled.ul`
 	}
 	@media (min-width: ${breakpoints.desktop}) {
 		max-width: ${breakpoints.desktop};
+		padding: 0;
 	}
 `;
 
@@ -98,7 +103,7 @@ export const Icon = styled.img`
 `;
 
 export const Genre = styled.p`
-	padding: 2px 4px;
+	padding: 5px;
 	margin: 0 8px 0 0;
 	border-radius: 4px;
 	font-size: 12px;
@@ -106,4 +111,53 @@ export const Genre = styled.p`
 	color: ${primaryColor};
 	background-color: ${backgroundColor};
 	float: right;
+`;
+
+export const Form = styled.form`
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 524px;
+	padding-left: 16px;
+	margin: 25px auto;
+	color: ${primaryColor};
+
+	@media (min-width: ${breakpoints.tablet}) {
+		max-width: ${breakpoints.tablet};
+		flex-direction: row;
+	}
+	@media (min-width: ${breakpoints.desktop}) {
+		max-width: 1400px;
+		flex-direction: row;
+		padding-left: 0;
+	}
+`;
+
+export const Label = styled.label`
+	margin-right: 16px;
+	flex-basis: 25%;
+	margin-top: 16px;
+`;
+
+export const Select = styled.select`
+	width: 100%;
+	margin-top: 5px;
+	color: white;
+	background-color: ${backgroundColor};
+`;
+
+export const LoadingContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 100px 50px 0 0;
+
+	@media (min-width: ${breakpoints.tablet}) {
+		max-width: ${breakpoints.tablet};
+	}
+	@media (min-width: ${breakpoints.desktop}) {
+		max-width: ${breakpoints.desktop};
+	}
 `;

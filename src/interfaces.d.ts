@@ -1,3 +1,5 @@
+import { ChangeEvent } from 'react';
+
 export type Game = {
 	id: number;
 	title: string;
@@ -15,8 +17,27 @@ export type Game = {
 export interface GameListProps {
 	err?: string;
 	games: Game[];
+	loading: boolean;
+	onFilterChange: (e: ChangeEvent<HTMLFormElement>) => void;
 }
 
 export interface GameCardProps {
 	content: Game;
 }
+
+export interface GameFilterProps {
+	onChange: (e: ChangeEvent<HTMLFormElement>) => void;
+}
+
+export type Filter = {
+	platform: string;
+	genre?: string;
+	tag?: string;
+	sortBy?: string;
+};
+
+export type Response = {
+	games: Game[];
+	error?: string;
+	loading: boolean;
+};

@@ -15,23 +15,24 @@ import { WiNDOWs, BROWSER } from './constants';
 
 const GameCard = ({ content }: GameCardProps): ReactElement => {
 	const { id, title, thumbnail, short_description, genre, platform } = content;
-	const icons = platform.split(', ');
-
-	const showIcons = () => {
-		if (icons.length > 1) {
-			return (
-				<>
-					<Icon src={browserIcon} alt="brower-icon" key={`${id}-browser`} />
-					<Icon src={windowsIcon} alt="brower-icon" key={`${id}-windows`} />
-				</>
-			);
-		} else if (icons[0] === BROWSER)
-			return <Icon src={browserIcon} alt="brower-icon" key={`${id}-browser`} />;
-		else if (icons[0] === WiNDOWs)
-			<Icon src={windowsIcon} alt="brower-icon" key={`${id}-windows`} />;
-
-		return null;
-	};
+	const icons = platform.split(',').map(p => {
+		let icon = null;
+		switch (p.trim()) {
+			case BROWSER:
+				icon = (
+					<Icon key={`${id}-browser`} alt="browser icon" src={browserIcon} />
+				);
+				break;
+			case WiNDOWs:
+				icon = (
+					<Icon key={`${id}-windows`} alt="windows icon" src={windowsIcon} />
+				);
+				break;
+			default:
+				break;
+		}
+		return icon;
+	});
 
 	console.log(icons);
 
@@ -43,7 +44,7 @@ const GameCard = ({ content }: GameCardProps): ReactElement => {
 				<Title>{title}</Title>
 				<Description>{short_description}</Description>
 				<Genre>{genre}</Genre>
-				{showIcons()}
+				{icons}
 			</Details>
 		</StyledLink>
 	);

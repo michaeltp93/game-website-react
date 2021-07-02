@@ -22,6 +22,15 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     background-color: ${backgroundColor};
   }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+  }
 `;
 
 export default GlobalStyles;
